@@ -2,8 +2,8 @@
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
     try:
-        for i in range(x):
-            if type(my_list[i]) == int:
+        for item in my_list:
+            if isinstance(integer,  int):
                 if count < x:
                     print("{:d}".format(my_list[i]), end='')
                     count += 1
@@ -13,4 +13,3 @@ def safe_print_list_integers(my_list=[], x=0):
         return count
     except Exception:
         return count
-
