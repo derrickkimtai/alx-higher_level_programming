@@ -93,3 +93,9 @@ class Rectangle:
             return (self.__width == other.width and
                     self.__height == other.height)
         return False
+
+    def __del__(self):
+        """
+        when a class deleted used to impelemnt it
+        """
+        print("Bye rectangle...")
