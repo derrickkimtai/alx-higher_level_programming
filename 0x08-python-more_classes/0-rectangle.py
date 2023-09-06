@@ -2,6 +2,8 @@
 """
 this module defines the square class.
 """
+
+
 class Rectangle:
     """
     this represents a rectangle
