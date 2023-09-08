@@ -1,0 +1,15 @@
+#test for say_my_name in the file
+
+Test 1: valid input with fisrt Name and last name
+Iput:
+>>> say_my_name("John", "kibet")
+
+Expected output:
+My name is john kibet
+
+Test 2: invalid iput with non-string first name
+input:
+>>> say_my_name(123, "Kibet")
+
+Expected output:
+Error: TyoeError - first_name must be a string or last_name must be a string
