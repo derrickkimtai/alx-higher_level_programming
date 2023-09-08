@@ -1,54 +1,74 @@
-# Test case for the matrix_divided function
+# Test cases for the matrix_divided function
 
-test 1: valid matrix division
-input matrix
-1 2 3
-4 5 6
-7 8 
-
-Dision: 2
-Expected Output
-0.5 1.0 1.5
-2.0 2.5 3.0
-3.5 4.0 4.5
-
-test 2: invalid matrix type
-input matrix: "not_a_martrix"
-division: 2
-
-Expected Output
-Error: TypeError - matrix must be a matrix (list of lists) of integers/floats
-
-Test: 3 Unequal Row size
-Input Matrix
-1 2 3
-4 5
-7 8 9
-
-Division: 2
-
-Expected output:
-Error: TypeError - Each row of the matrix must have the same size
-
-Test 4: Invalid Divisior Type
-input matrix:
-1 2 3
-4 5 6
-7 8 9
-
-Divisor: "not_a_number
+Test 1: Valid Input (List of Lists of Integers and Integer Divisor)
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2)
 
 Expected Output:
-Error: TypeError - div must be a number
+>>> [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
 
-Test 5: Division by zero
-Input Matrix
-1 2 3
-4 5 6
-7 8 9
+Reason for Failure: Previous check failed
 
-Divisor: 0
+Test 2: Invalid Input (List of Lists of Integers and String Divisor)
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], "not_a_number")
 
 Expected Output:
-Error: ZeroDivisionError - division by zero
+>>> Error: TypeError - div must be a number
+
+Reason for Failure: Previous check failed
+
+Test 3: Division by Zero (List of Lists of Integers and Divisor = 0)
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 0)
+
+Expected Output:
+>>> Error: ZeroDivisionError - division by zero
+
+Reason for Failure: Previous check failed
+
+Test 4: Invalid Input (Not a List of Lists of Integers and Integer Divisor)
+Input:
+>>> matrix_divided("not_a_matrix", 2)
+
+Expected Output:
+>>> Error: TypeError - matrix must be a matrix (list of lists) of integers/floats
+
+Reason for Failure: Previous check failed
+
+Test 5: Non-Rectangular Matrix (List of Lists of Integers with Unequal Row Sizes)
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5], [7, 8, 9]], 2)
+
+Expected Output:
+>>> Error: TypeError - Each row of the matrix must have the same size
+
+Reason for Failure: Previous check failed
+
+Test 6: Division by Infinity (List of Lists of Integers and Divisor = float('inf'))
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], float('inf'))
+
+Expected Output:
+>>> All values == 0.0
+
+Reason for Failure: Previous check failed
+
+Test 7: Invalid Input (List of Lists of Integers with One Float(inf/nan) and Integer Divisor)
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5, float('inf')], [7, 8, 9]], 2)
+
+Expected Output:
+>>> Error: TypeError - a must be an integer or float
+
+Reason for Failure: Previous check failed
+
+Test 8: Invalid Input (List of Lists of Integers with One Float(inf/nan) and Float(inf/nan) Divisor)
+Input:
+>>> matrix_divided([[1, 2, 3], [4, 5, float('inf')], [7, 8, 9]], float('inf'))
+
+Expected Output:
+>>> Error: TypeError - a must be an integer or float
+
+Reason for Failure: Previous check failed
 
