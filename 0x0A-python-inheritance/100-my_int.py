@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+this is a module to inherit int
+"""
 class MyInt(int):
     """
     this a class to change operations
