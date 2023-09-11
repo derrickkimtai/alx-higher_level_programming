@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+class BaseGeometry:
+    """
+    calculates and returns the area of the geometric shape
+    
+    it checks some errors and raises the instanly whatsoever the case
+    """
+    def area(self):
+    """
+        it raises an error to the area methof of instastiation
+    """
+        raise Exception("area() is not implemented")
+    def integer_validator(self, name, value):
+        """
+        Validate an integer value
+
+        Parameters:
+            name (str):the name of the value being validated.
+            value (int): the value to be validated.
+
+        Raises:
+        TypeError: if the value is not an integer
+        ValueError: If the value is less then
+        """
+        if not isinstance(value, int):
+            raise TypeError("<name> must be an integer")
+        if value <= 0:
+            raise ValueError("<name> must be greater than 0")
+
