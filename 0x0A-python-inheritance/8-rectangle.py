@@ -45,6 +45,9 @@ class Rectangle(BaseGeometry):
          the same error as the previous ones above mentioned
     """
     def __init__(self, width, height):
+        """
+        it has two attributes with should not be positives
+        """
         self.__width = None
         self.__height = None
         self.integer_validator("width", width)
