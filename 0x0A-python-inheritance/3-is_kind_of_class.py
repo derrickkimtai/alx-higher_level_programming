@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+checks if the calss was inherited with is the objects and the methods
+"""
+
+
 def is_kind_of_class(obj, a_class):
     """
     Returns True if the objects is an instance of or if
