@@ -11,9 +11,9 @@ class BaseGeometry:
     it checks some errors and raises the instanly whatsoever the case
     """
     def area(self):
-    """
-    it raises an error to the area methof of instastiation
-    """
+        """
+        it raises an error to the area methof of instastiation
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -47,6 +47,8 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """
         it has two attributes with should not be positives
+
+        takes two parameters
         """
         self.__width = None
         self.__height = None
