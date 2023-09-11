@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+this a module with a area method but raises an error
+"""
+
+
 class BaseGeometry:
     """
     it finds the area but it raises an execption

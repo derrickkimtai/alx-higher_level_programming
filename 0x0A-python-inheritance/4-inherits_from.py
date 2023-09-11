@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+the module checks if the objects is an instance of a class that inherited
+"""
+
+
 def inherits_from(obj, a_class):
     """
     Return True if the objets is an instance of a class

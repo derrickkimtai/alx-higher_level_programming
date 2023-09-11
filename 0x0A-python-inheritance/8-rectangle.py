@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+this module has two  class basegometry and rectangle
+"""
+
+
 class BaseGeometry:
     """
     calculates and returns the area of the geometric shape
@@ -7,9 +12,10 @@ class BaseGeometry:
     """
     def area(self):
     """
-        it raises an error to the area methof of instastiation
+    it raises an error to the area methof of instastiation
     """
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """
         Validate an integer value
@@ -26,6 +32,7 @@ class BaseGeometry:
             raise TypeError("<name> must be an integer")
         if value <= 0:
             raise ValueError("<name> must be greater than 0")
+
 
 class Rectangle(BaseGeometry):
     """

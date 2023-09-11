@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+this module has a basegomerty with two methods
+"""
 class BaseGeometry:
     """
     calculates and returns the area of the geometric shape
