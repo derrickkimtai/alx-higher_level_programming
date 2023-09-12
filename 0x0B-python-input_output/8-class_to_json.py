@@ -2,6 +2,8 @@
 """
 defines a json class
 """
+
+
 def class_to_json(obj):
     """
     functions of the dictionary data structure
