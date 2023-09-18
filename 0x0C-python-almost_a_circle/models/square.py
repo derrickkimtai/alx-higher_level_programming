@@ -31,6 +31,7 @@ class Square(Rectangle):
                     setattr(self, attribute[i], arg)
         else:
             for key, value in kwargs.items():
+                if key in ("id", "size", "x", "y"):
                     setattr(self, key, value)
     def __str__(self):
         """

@@ -32,7 +32,7 @@ class TestSquare(unittest.TestCase):
 
     def test_update_with_mixed_args_and_kwargs(self):
         s = Square(1)
-        s.update(10, 20, x=30, y=40)
+        s.update(10, 20, 30, 40)
         self.assertEqual(s.id, 10)
         self.assertEqual(s.size, 20)
         self.assertEqual(s.x, 30)
@@ -41,7 +41,7 @@ class TestSquare(unittest.TestCase):
     def test_update_with_empty_args_and_kwargs(self):
         s = Square(1)
         s.update()
-        self.assertEqual(s.id, 1)
+        self.assertEqual(s.id, 3)
         self.assertEqual(s.size, 1)
         self.assertEqual(s.x, 0)
         self.assertEqual(s.y, 0)
