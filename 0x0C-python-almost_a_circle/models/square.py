@@ -38,3 +38,9 @@ class Square(Rectangle):
             override the __str__ method to return a string representation
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def to_dictionary(self):
+        """
+            Returns a dictionary representation of the rectangle object
+        """
+        return {'id': self.id, 'size':self.size, 'x':self.x, 'y':self.y}
