@@ -1,7 +1,16 @@
 #!/usr/bin/bash
+"""
+this use a class of rectangle by importation
+"""
 from .rectangle import Rectangle
+"""
+imports the class Rectangle
+"""
 
 class Square(Rectangle):
+    """
+        this is a class Rectangle with many terms
+    """
     def __init__(self, size, x=0, y=0, id=None):
         """
             call the super constructor with id , x, y, width, and height
@@ -10,6 +19,9 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """
+            retrievs thesize
+        """
         return self.width
     @size.setter
     def size(self, value):
@@ -24,6 +36,9 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """
+         it used to update
+        """
         if args:
             attribute = ["id", "size", "x", "y"]
             for i, arg in enumerate(args):
