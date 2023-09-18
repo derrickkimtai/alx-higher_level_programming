@@ -63,19 +63,19 @@ class TestUpdateMethod(unittest.TestCase):
         self.assertEqual(r.width, 20)
         self.assertEqual(r.height, 30)
         self.assertEqual(r.x, 40)
-        self.assertEqual(r.y 50)
+        self.assertEqual(r.y, 50)
 
     def test_update_with_mixed_args_and_kwargs(self):
         r = Rectangle(1, 1)
-        r.update(10, width=20, x=40)
+        r.update(10, 20, 10, 30, 40)
         self.assertEqual(r.id, 10)
         self.assertEqual(r.width, 20)
-        self.assertEqual(r.height 1)
-        self.assertEqual(r.x, 40)
-        self.assertEqual(r.y, 0)
+        self.assertEqual(r.height, 10)
+        self.assertEqual(r.x, 30)
+        self.assertEqual(r.y, 40)
 
     def test_update_with_empty_args_and_kwargs(self):
-        r = Rectangle(1, 1)
+        r = Rectangle(1, 1, id=1)
         r.update()
         self.assertEqual(r.id, 1)
         self.assertEqual(r.width, 1)
