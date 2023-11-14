@@ -1,4 +1,4 @@
-<h>0x13-javascript_objects_scopes_closures <h>
+<h1>0x13-javascript_objects_scopes_closures <h1>
 
 <p>This project you will learn about        <li>clasess<li>
             <li>objects<li>
