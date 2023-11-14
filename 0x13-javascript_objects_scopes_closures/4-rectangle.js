@@ -5,8 +5,7 @@ module.exports = class Rectangle {
         this.width = w;
         this.height = h;
   } else {
-        this.width = undefined;
-        this.height = undefined;
+        const emptyObject = {};
       }
     }
     print() {
@@ -19,7 +18,7 @@ module.exports = class Rectangle {
         this.height = temp;
     }
     double () {
-        this.width * 2;
-        this.height * 2;
+        this.width *= 2;
+        this.height *= 2;
     }
   };
