@@ -1,19 +1,15 @@
-import MYSQLdb
+#!/usr/bin/python3
+"""
+Lists all states from the database hbtn_0e_0_usa.
+Usage: ./0-select_states.py <mysql username> \
+                            <mysql password> \
+                             <database name>
+"""
 import sys
-
-def getstates(username, password, database):
-    db = MYSQLdb.connect(host="localhost", port=3306, user=kimtai, passwd=password, db=database)
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    row = cursor.fetchall()
-    for row in rows:
-        print(row)
-
-    db.close()
+import MySQLdb
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python 0-select_states.py <username> <password> <database>")
-    else:
-        username, password, database = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[3]
-        get_states(username, password, database)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = db.cursor()
+    c.execute("SELECT * FROM `states`")
+    [print(state) for state in c.fetchall()]
