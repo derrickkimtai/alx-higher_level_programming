@@ -10,8 +10,8 @@ def get_states_by_name(username, password, database, state_name):
     """
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
-    cursor.execute(query, (state_name,)) 
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(query) 
     results = cursor.fetchall()
     for row in results:
         print(row)
