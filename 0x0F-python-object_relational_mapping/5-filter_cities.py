@@ -1,8 +1,14 @@
 #!/usr/bin/python3
+"""
+imported the below modules
+"""
 import sys
 import MySQLdb
 
 def get_state_cities(username, password, database, state_name):
+    """
+    takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa
+    """
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
 
