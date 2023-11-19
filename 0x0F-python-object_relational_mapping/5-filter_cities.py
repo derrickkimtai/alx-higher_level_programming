@@ -12,19 +12,13 @@ def get_state_cities(username, password, database, state_name):
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
 
-    query = """
-        SELECT cities.id, cities.name, states.name
-        FROM cities
-        INNER JOIN states ON cities.state_id = states.id
-        WHERE states.name = %s
-        ORDER BY cities.id ASC
-    """
-    cursor.execute(query, (state_name,))
+    query = "SELECT cities.name FROM cities INNER JOIN states ON states.id = cities.state_id WHERE states.name LIKE '{:s}%' ORDER BY cities.id ASC".format(state_name)
+    cursor.execute(query)
 
     cities = cursor.fetchall()
 
-    for city in cities:
-        print(city)
+    for row in cities:
+        print(row)
 
     db.close()
 
