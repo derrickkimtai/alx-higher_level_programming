@@ -13,9 +13,9 @@ def get_state_cities(username, password, database, state_name):
     cursor = db.cursor()
 
     query = """
-        SELECT cities.id, cities.name
+        SELECT cities.id, cities.name, states.name
         FROM cities
-        JOIN states ON cities.state_id = states.id
+        INNER JOIN states ON cities.state_id = states.id
         WHERE states.name = %s
         ORDER BY cities.id ASC
     """
