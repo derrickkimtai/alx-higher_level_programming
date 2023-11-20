@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from sqlalchemy impor create_engine
-from sqlalchemy.orm import sessionmaker
+from SQLAlchemy impor create_engine
+from SQLAlchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
