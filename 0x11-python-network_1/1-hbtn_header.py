@@ -9,4 +9,4 @@ if __name__ == "__main__":
 
     with urllib.request.urlopen(url, timeout=10) as response:
         request_id = response.headers.get('X-Request-Id')
-        print(dict(request_id))
+        print((request_id))
