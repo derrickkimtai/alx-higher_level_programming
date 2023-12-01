@@ -9,9 +9,6 @@ if __name__ == "__main__":
 
     response = requests.get(url)
 
-    if response.status_code == 200:
-        print("Body response:")
-        print(f"\t- type: {type(response.content)}")
-        print(f"\t- content: {response.content.decode('utf-8')}")
-    else:
-        print("Failed to fetch")
+    print("Body response:")
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
