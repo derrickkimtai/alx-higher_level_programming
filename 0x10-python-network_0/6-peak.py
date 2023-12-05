@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    This script defines a function find_peak to identify peaks in an unsorted list of integers
+"""
 def find_peak(list_of_integers):
     """
         finds a peak in a list of unsorted integers.
